@@ -46,6 +46,31 @@ void main(List<String> arguments) {
   var new_list = numbers_2.where(((element) => element % 2 != 0));
   print(numbers_2);
   print(new_list);
+
+  names.add("Daniel");
+  names.addAll(['Darío', 'Dardo', 'Daniel', 'Ariel']);
+  names.remove('Daniel');
+  names.removeAt(0);
+  names.removeWhere((element) {
+    print('element $element');
+    return false; // return obligatorio
+  }); // itera todos los elementos
+  names.removeWhere((element) =>
+      element == "Dardo"); // itera hasta que se cumpla la condicion
+  print(names.indexOf('Dario'));
+  print(names.indexWhere((element) => element == 'Dario'));
+
+  final filtered = names.where((element) => element.startsWith('A'));
+  print('filtered $filtered'); // sigue retornando una lista
+  print(filtered.toList()); // sigue retornando una lista
+
+  final filtered_2 = names.lastWhere((element) => element.startsWith('A'));
+  print(filtered_2); // retorna solo el ultimo y no es lista
+  final filtered_3 = names.lastWhere(
+    (element) => element.startsWith('R'),
+    orElse: () => "not found",
+  );
+  print(filtered_3);
 }
 
 class MyPet {
@@ -97,3 +122,5 @@ String contains = '${lastName.contains("z")}';
 // price = ""
 
 // TODOS LAS VARIABLES HEREDAN DE LA CLASE Object
+
+final names = <String>['Diego'];
