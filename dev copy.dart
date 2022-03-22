@@ -1,7 +1,3 @@
-import 'dart:developer';
-
-import 'package:test/test.dart';
-
 void main(List<String> arguments) {
   print('dev mode');
   print(arguments);

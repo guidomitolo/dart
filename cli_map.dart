@@ -1,5 +1,3 @@
-import 'package:dart_app/dart_app.dart' as dart_app;
-
 void main(List<String> arguments) {
   Map<String, String> users = {}; //  llave string, valor string
   users['user1'] = 'Daniel';
