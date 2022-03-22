@@ -18,6 +18,7 @@ void main(List<String> arguments) {
   // assignment but not definition only can be done in runtime
   dynamicValue = 10;
   print(dynamicValue);
+  dynamicValue = true;
   print(dynamicValue.runtimeType);
 }
 
@@ -28,6 +29,7 @@ void main(List<String> arguments) {
 /// code exampple
 /// '''
 
+// dynamic: can change var type assignment
 dynamic dynamicValue = 'Sarasa';
 
 int sum(int a, int b) {
@@ -59,5 +61,3 @@ String fullname2 = '$firstName $lastName, age: $ageOfPet';
 String contains = '${lastName.contains("z")}';
 
 // All variables inherit from OBJECT Class
-
-final names = <String>['Diego'];

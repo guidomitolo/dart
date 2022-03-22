@@ -1,7 +1,7 @@
 void main(List<String> arguments) {
   // CONST VS FINAL
-  // const para variables que guardan datos
-  // previo a la ejecucion del proyecto (i.e. claves o variables de settings)
+  // const for context or settings vars setted before runtime
+  // (passwords or env variables)
 
   // "final" var prevents later assignment -> immutability
   final String inmutable = 'test';
@@ -10,7 +10,11 @@ void main(List<String> arguments) {
   final numero_inmutable = 1;
   // numero_inmutable = 1; -> ERROR
 
-  // const DateTime date = DateTime.now() -> ERROR: The constructor being called isn't a const constructor.
+  // CONST Class Constructor
+
+  // DateTime cannot be CONST
+  // The constructor being called isn't a const constructor.
+  // const DateTime date = DateTime.now() -> ERROR
 
   const lulu =
       MyPet(); // const class constructor required for const variable/instance
