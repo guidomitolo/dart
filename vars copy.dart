@@ -2,36 +2,38 @@ void main(List<String> arguments) {
   /// main block for var (re)assignment and console log from CLI ///
 
   print('Data Types and Variables in Dart');
-
   print(arguments); // args from CLI
-
   print(sum(2, 5)); // int from function
 
-  // Concatenated string and its attributes
+  final cat = Pet();
+  print(cat.age);
   print(username);
+
   print(fullname);
   print(fullname2);
   print(fullname2.length);
-  print(fullname2.contains("z"));
   print(contains);
 
-  // assignment but not definition only can be done in runtime
+  // la asignacion (no definicion) solo se puede hacer por contexto
   dynamicValue = 10;
   print(dynamicValue);
   print(dynamicValue.runtimeType);
 
-  // "final" var prevents later assignment -> immutability
+  // "final" impide asignacion posterior -> inmutabilidad
   final String inmutable = 'test';
-  // inmutable = 'test2'; -> ERROR
+  // inmutable = 'test2'; error
 
   final numero_inmutable = 1;
-  // numero_inmutable = 1; -> ERROR
+  // numero_inmutable = 1; error
 
   // CONST VS FINAL
-  // const for context or settings vars setted before runtime
-  // (passwords or env variables)
+  // const para variables que guardan datos
+  // previo a la ejecucion del proyecto (i.e. claves o variables de settings)
 
   // const DateTime date = DateTime.now() -> ERROR: The constructor being called isn't a const constructor.
+
+  const lulu =
+      MyPet(); // const class constructor required for const variable/instance
 }
 
 // Comments:
@@ -40,6 +42,11 @@ void main(List<String> arguments) {
 /// '''
 /// code exampple
 /// '''
+
+class MyPet {
+  // MyPet(); -> Invalid constructor for const instance/variable
+  const MyPet();
+}
 
 dynamic dynamicValue = 'Sarasa';
 
